@@ -1,10 +1,16 @@
 import gsap from "https://cdn.skypack.dev/gsap@v3.10.4";
 import { sharedAnimation } from "./config.js";
 
-import slide_0 from "./slide_0.js";
+import slide_0 from "./slide_0.js"; // landing page animations
+import slide_1 from "./slide_1.js"; // standard animate header + image
+import slide_2 from "./slide_2.js"; // animate center card
+import slide_3 from "./slide_3.js"; // stagger all
 
 export const animations = {
-    0: slide_0,
+    slide_0,
+    slide_1,
+    slide_2,
+    slide_3,
 };
 
 export const fadeOutSlide = (element) =>

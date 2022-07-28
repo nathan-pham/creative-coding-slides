@@ -1,4 +1,5 @@
 import { animations, fadeInSlide } from "./animations/animations.js";
+import { toggleFullScreen } from "./toggleFullScreen.js";
 import { splitText } from "./splitText.js";
 
 const slides = [...document.querySelectorAll(".slide")];
@@ -23,8 +24,8 @@ const changeSlides = (newSlideIndex = 0) => {
 
 // animate slides
 const animateSlide = (currentSlide) => {
-    const animation = animations[currentSlide];
     const slide = slides[currentSlide];
+    const animation = animations[slide.dataset.animation];
 
     if (typeof animation === "function") {
         animation(slide);
@@ -35,10 +36,18 @@ const animateSlide = (currentSlide) => {
 
 // change to new slide on key press
 window.addEventListener("keydown", (e) => {
-    if (e.key == "ArrowRight") {
-        changeSlides(currentSlide + 1);
-    } else if (e.key == "ArrowLeft") {
-        changeSlides(currentSlide - 1);
+    switch (e.key) {
+        case "ArrowRight":
+            changeSlides(currentSlide + 1);
+            break;
+
+        case "ArrowLeft":
+            changeSlides(currentSlide - 1);
+            break;
+
+        case "Enter":
+            toggleFullScreen();
+            break;
     }
 });
 
