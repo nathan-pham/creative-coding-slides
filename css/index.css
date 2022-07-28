@@ -1,0 +1,117 @@
+/* Slide component */
+.slide {
+    overflow: hidden;
+    padding: 0 7vw;
+}
+
+/* Slide themes */
+.slide-theme h1 {
+    color: var(--orange);
+    font-size: 5rem;
+}
+
+.slide-theme ul {
+    line-height: 1.5;
+}
+
+.slide-theme p {
+    line-height: 1.25;
+}
+
+/* Slide panel types */
+.slide-theme-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.slide-theme-split {
+    display: flex;
+    gap: 2rem;
+    font-size: 2rem;
+}
+
+.slide-theme-split > * {
+    flex: 0 1 50%;
+}
+
+.slide .slide-theme-center {
+    padding: 3.375rem 0;
+}
+
+.img {
+    border-radius: 3rem;
+    overflow: hidden;
+    border: 1px solid var(--blue);
+}
+
+.img-frame {
+    border-radius: 50rem;
+    max-height: 100%;
+    margin: 0 auto;
+    box-shadow: 0 2rem 0 var(--blue);
+    border: 1px solid var(--blue);
+}
+
+.img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Landing Slide (1st Slide) */
+.slide-landing__title {
+    font-size: 20vmin;
+    line-height: 1.1;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.slide-landing__title span {
+    display: inline-block;
+}
+
+.slide-landing__title span.highlight {
+    color: var(--orange);
+}
+
+.slide-landing__author {
+    font-size: 2rem;
+    margin: 6rem 0 0 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Slide utilities */
+.slide-hidden {
+    display: none;
+}
+
+b {
+    color: var(--green);
+}
+
+.logo {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 100%;
+    z-index: 10;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    animation: 10s linear infinite rotate;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

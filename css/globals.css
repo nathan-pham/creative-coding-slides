@@ -1,0 +1,24 @@
+:root {
+    --bg: #f3f1de;
+    --orange: #d27a60;
+    --blue: #3f405b;
+    --green: #8bb299;
+    --yellow: #ebcc8e;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--bg);
+    overflow: hidden;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
