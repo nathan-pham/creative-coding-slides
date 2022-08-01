@@ -16,7 +16,7 @@ export default (slide) => {
     );
 
     gsap.fromTo(
-        slide.querySelectorAll("p, li"),
+        slide.querySelectorAll("p, li, iframe"),
         {
             opacity: 0,
             x: -100,
